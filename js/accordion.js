@@ -1,32 +1,37 @@
 'use strict';
 
-const featureLinkElems = document.querySelectorAll('.feature__link');
-const featureSubElems = document.querySelectorAll('.feature-sub');
+document.addEventListener('DOMContentLoaded', () => {
 
-// for (let i = 0; i < featureLinkElems.length; i++) {
+   const featureLinkElems = document.querySelectorAll('.feature__link');
+   const featureSubElems = document.querySelectorAll('.feature-sub');
 
-//    featureLinkElems[i].addEventListener('click' , () => {
-//       featureSubElems[i].classList.toggle('hidden');
-//       featureLinkElems[i].classList.toggle('feature__link_active');
-//    })
+   // for (let i = 0; i < featureLinkElems.length; i++) {
 
-// }
+   //    featureLinkElems[i].addEventListener('click' , () => {
+   //       featureSubElems[i].classList.toggle('hidden');
+   //       featureLinkElems[i].classList.toggle('feature__link_active');
+   //    })
 
-featureLinkElems.forEach( (btn, index) => {
+   // }
 
-   btn.addEventListener('click', () => {
-      
-      featureSubElems.forEach( (featureSubElem) => {
-         featureSubElem.classList.add('hidden');
-      })
+   featureLinkElems.forEach( (btn, index) => {
 
-      featureLinkElems.forEach( (featureLinkElem) => {
-         featureLinkElem.classList.remove('feature__link_active')
-      })
+      btn.addEventListener('click', () => {
+         
+         featureSubElems.forEach( (featureSubElem) => {
+            featureSubElem.classList.add('hidden');
+         })
+
+         featureLinkElems.forEach( (featureLinkElem) => {
+            featureLinkElem.classList.remove('feature__link_active')
+         })
 
 
-      featureSubElems[index].classList.remove('hidden');
-      btn.classList.add('feature__link_active');
+         featureSubElems[index].classList.remove('hidden');
+         btn.classList.add('feature__link_active');
+      });
+
    });
 
 });
+
