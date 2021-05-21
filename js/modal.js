@@ -1,6 +1,6 @@
 'use strict';
 
-const moreElem = document.querySelector('.more');
+const designBlockElem = document.querySelector('.design-block');
 const modalElem = document.querySelector('.modal');
 
 const openModal = () => {
@@ -14,10 +14,18 @@ const closeModal = () => {
 
   modalElem.classList.add('hidden');
   enabledScroll();
-
+  
 };
 
-moreElem.addEventListener('click', openModal);
+designBlockElem.addEventListener('click', event => {
+  
+  const target = event.target;
+
+  if (target.matches('.more')) {
+    openModal();
+  }
+
+});
 
 modalElem.addEventListener('click', (event) => {
   

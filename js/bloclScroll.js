@@ -4,7 +4,7 @@ const disabledScroll = () => {
 
   document.body.dataset.scrollY = window.scrollY;
 
-  // вычисляю ширину скролла слева. ширину экрана отнимаю от ширины браузера
+  // вычисляю ширину скролла справа. ширину экрана отнимаю от ширины браузера
   const scrollWidth = window.innerWidth - document.body.offsetWidth;
 
   document.body.style.cssText = `
